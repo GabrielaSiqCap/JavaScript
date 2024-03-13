@@ -92,7 +92,7 @@ class Petzinho {
   }
 
   getNome() {
-    return this.nome;
+    retangulourn this.nome;
   }
 
   setNome(novoNome) {
@@ -147,3 +147,39 @@ const animais = [
 for (const animal of animais) {
   animal.fazerBarulho();
 }
+
+console.log("-------------------------Exemplos-------------------------");
+//Criando uma classe Retângulo
+class Retangulo {
+  constructor(comprimento, Largura) {
+    this.comprimento = comprimento;
+    this.largura = Largura;
+  }
+  obterArea() {
+    return this.comprimento * this.largura;
+  }
+  obterPerimetro() {
+    return this.comprimento * 2 + this.largura * 2;
+  }
+  setComprimento(novoComprimento) {
+    this.comprimento = novoComprimento;
+  }
+  setLargura(novaLargura) {
+    this.largura = novaLargura;
+  }
+}
+//Criando um objeto do "tipo" Retângulo
+const ret1 = new Retangulo(10, 15);
+
+function mostrarRetangulo(retangulo) {
+  console.table(retangulo);
+  console.log(`comprimento = ${retangulo.comprimento}`);
+  console.log(`largura = ${retangulo.largura}`);
+  console.log(`área = ${retangulo.obterArea()}`);
+  console.log(`perimetro = ${retangulo.obterPerimetro()}`);
+}
+mostrarRetangulo(ret1);
+ret1.setComprimento(20);
+mostrarRetangulo(ret1);
+ret1.setLargura(20);
+mostrarRetangulo(ret1);
